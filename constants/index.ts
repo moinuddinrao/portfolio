@@ -1,8 +1,10 @@
 import {
   BarChartHorizontal,
+  Code,
   Code2,
   Component,
   Database,
+  ExternalLink,
   GitBranch,
   Github,
   Globe,
@@ -11,6 +13,7 @@ import {
   Palette,
   Server,
   Wrench,
+  Zap,
 } from "lucide-react";
 
 import { AboutParagraph, EducationAchievement, HeroContent } from "@/types";
@@ -332,6 +335,200 @@ export const volunteerExperiences = [
       "Prisma",
       "TailwindCSS",
       "TanStack Query",
+    ],
+  },
+];
+
+/**
+ * Maps project category names to their corresponding Lucide icons
+ * @param category - The project category name
+ * @returns The appropriate Lucide icon component
+ */
+export const getCategoryIcon = (category: string) => {
+  switch (category) {
+    case "FinTech":
+      return Database;
+    case "Analytics":
+      return Code;
+    case "GreenTech":
+      return Globe;
+    case "AI/ML":
+      return Zap;
+    case "SaaS":
+      return ExternalLink;
+    case "EdTech":
+      return Code;
+    default:
+      return Code;
+  }
+};
+
+/**
+ * Maps project category names to their corresponding background color classes
+ * @param category - The project category name
+ * @returns Tailwind CSS class for the category's background color
+ */
+export const getCategoryColor = (category: string) => {
+  switch (category) {
+    case "FinTech":
+      return "bg-green-500";
+    case "Analytics":
+      return "bg-blue-500";
+    case "GreenTech":
+      return "bg-emerald-500";
+    case "AI/ML":
+      return "bg-purple-500";
+    case "SaaS":
+      return "bg-orange-500";
+    case "EdTech":
+      return "bg-indigo-500";
+    default:
+      return "bg-gray-500";
+  }
+};
+
+/**
+ * List of featured projects with details
+ * Each project includes title, description, image, category, technologies, and features
+ */
+export const projects = [
+  {
+    category: "FinTech",
+    title: "Credit Scoring System",
+    description:
+      "A comprehensive data-driven credit scoring platform for SMEs with powerful analytics, ML integration, and financial reporting capabilities.",
+    image: "/api/placeholder/600/400",
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Ant Design",
+      "TailwindCSS",
+      "Recharts",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    features: [
+      "Interactive data visualizations with Recharts",
+      "4-level nested tables with advanced filtering",
+      "ML integration for automated analytics",
+      "PDF export functionality for reports",
+      "Auto-logout with react-idle-timer",
+    ],
+  },
+  {
+    category: "Analytics",
+    title: "Merchant Analytics Platform",
+    description:
+      "Web app helping merchants analyze delivery zones, track menu performance, and receive data-driven suggestions for menu optimization.",
+    image: "/api/placeholder/600/400",
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Ant Design",
+      "Google Maps",
+      "Node.js",
+      "PostgreSQL",
+      "Sequelize",
+    ],
+    features: [
+      "Interactive delivery zone mapping with polygons",
+      "Menu performance analysis across mealtimes",
+      "Comparative analysis with sortable tables",
+      "Menu addition suggestion engine",
+      "Optimized API calls and caching",
+    ],
+  },
+  {
+    title: "EU CBAM Compliance Portal",
+    description:
+      "Carbon Border Adjustment Mechanism reporting platform for EU companies to manage operators, installations, and generate CBAM reports.",
+    image: "/api/placeholder/600/400",
+    category: "GreenTech",
+    technologies: [
+      "TypeScript",
+      "React.js",
+      "Ant Design",
+      "TailwindCSS",
+      "Nest.js",
+      "MongoDB",
+      "Prisma",
+    ],
+    features: [
+      "Complete CBAM reporting workflow",
+      "Server-side pagination and error handling",
+      "Advanced TypeScript for type safety",
+      "Daily client demos and feedback integration",
+      "Automated emissions calculations",
+    ],
+  },
+  {
+    title: "AI Business Mentor",
+    description:
+      "AI-powered chatbot providing strategic business insights, personalized guidance, and actionable steps for entrepreneurs.",
+    image: "/api/placeholder/600/400",
+    category: "AI/ML",
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Ant Design",
+      "TailwindCSS",
+      "Django",
+      "TanStack Query",
+    ],
+    features: [
+      "Real-time AI-driven business guidance",
+      "Interactive onboarding tour",
+      "Document generation and downloads",
+      "LLM integration optimization",
+      "Business plan and pitch generation",
+    ],
+  },
+  {
+    title: "AI Image SaaS Platform",
+    description:
+      "Comprehensive image processing platform with AI features including restoration, recoloring, object removal, and background removal.",
+    image: "/api/placeholder/600/400",
+    category: "SaaS",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Shadcn UI",
+      "TailwindCSS",
+      "MongoDB",
+      "Clerk",
+      "Cloudinary",
+      "Stripe",
+    ],
+    features: [
+      "Multiple AI image processing capabilities",
+      "Secure authentication with Clerk",
+      "Credit-based payment system with Stripe",
+      "Advanced image search functionality",
+      "Responsive modern design",
+    ],
+  },
+  {
+    title: "Psychometric Assessment Platform",
+    description:
+      "MBTI-based personality assessment platform that evaluates traits, determines personality types, and suggests potential careers.",
+    image: "/api/placeholder/600/400",
+    category: "EdTech",
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Ant Design",
+      "TailwindCSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    features: [
+      "Dynamic question switching interface",
+      "MBTI personality type determination",
+      "Personality trait visualization",
+      "Strengths and weaknesses analysis",
+      "Career suggestions based on results",
     ],
   },
 ];

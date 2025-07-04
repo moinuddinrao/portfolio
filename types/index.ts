@@ -8,6 +8,7 @@
  */
 
 import { Variants } from "framer-motion";
+import { LucideIcon } from "lucide-react";
 
 // Animation types
 export interface AnimationVariants {
@@ -52,4 +53,18 @@ export interface ExperienceItem {
   description: string;
   achievements: string[];
   technologies: string[];
+}
+
+// Contact types
+export interface ContactInfo {
+  icon: LucideIcon;
+  label: string;
+  value: string;
+}
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
 }

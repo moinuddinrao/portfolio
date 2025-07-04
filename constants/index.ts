@@ -10,13 +10,20 @@ import {
   Globe,
   Linkedin,
   Mail,
+  MapPin,
   Palette,
+  Phone,
   Server,
   Wrench,
   Zap,
 } from "lucide-react";
 
-import { AboutParagraph, EducationAchievement, HeroContent } from "@/types";
+import {
+  AboutParagraph,
+  ContactInfo,
+  EducationAchievement,
+  HeroContent,
+} from "@/types";
 
 /**
  * Navigation items
@@ -532,3 +539,60 @@ export const projects = [
     ],
   },
 ];
+
+/**
+ * Contact section heading content
+ */
+export const contactHeading = {
+  title: "Get In Touch",
+  titleHighlight: "Touch",
+  subtitle:
+    "Let's discuss your next project or explore opportunities to work together",
+};
+
+/**
+ * Contact information displayed in the contact section
+ */
+export const contactInfo: ContactInfo[] = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "moinuddinrao.dev@gmail.com",
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+92-305-3284679",
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Pakistan",
+  },
+];
+
+/**
+ * Contact form field labels and placeholders
+ */
+export const contactForm = {
+  nameLabel: "Your Name",
+  namePlaceholder: "John Doe",
+  emailLabel: "Email Address",
+  emailPlaceholder: "john@example.com",
+  subjectLabel: "Subject",
+  subjectPlaceholder: "Project Discussion",
+  messageLabel: "Message",
+  messagePlaceholder: "Tell me about your project or opportunity...",
+  submitButton: "Send Message",
+  successMessage: "Your message has been sent! I'll get back to you soon.",
+  errorMessage: "There was an error sending your message. Please try again.",
+};
+
+/**
+ * Availability status message
+ */
+export const availabilityStatus = {
+  status: "Available for Work",
+  message:
+    "I'm currently open to new opportunities and exciting projects. Let's build something amazing together!",
+};

@@ -41,3 +41,15 @@ export interface EducationAchievement {
   title: string;
   description: string;
 }
+
+// Experience types
+export interface ExperienceItem {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  type: string;
+  description: string;
+  achievements: string[];
+  technologies: string[];
+}

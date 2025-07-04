@@ -239,3 +239,99 @@ export const certifications = [
   "Meta Front-End Developer Professional Certification - Coursera (2022)",
   "IBM Full Stack Software Developer Professional Certification - Coursera (2023)",
 ];
+
+/**
+ * Work experiences
+ * Each experience includes title, company, location, period, type, description, achievements, and technologies used
+ */
+export const experiences = [
+  {
+    title: "Software Engineer",
+    company: "Aawaz AI",
+    location: "Pakistan",
+    period: "05/2024 - Present",
+    type: "Full-time",
+    description:
+      "Leading full-stack development and architecture for AI-powered applications in fintech domain.",
+    achievements: [
+      "[Credit Scoring] Led front-end architecture for credit scoring platform serving SMEs",
+      "[Credit Scoring] Designed interactive data visualizations using Recharts for financial analytics",
+      "[Credit Scoring] Implemented 4-level nested tables with advanced filtering for financial reports",
+      "[Credit Scoring] Optimized caching for data-heavy modules improving performance by 40%",
+      "[Credit Scoring] Collaborated with ML engineers to streamline data pipelines",
+      "[Merchant Analytics] Visualized top-performing delivery zones using Google Maps",
+      "[Merchant Analytics] Built data-driven menu suggestion engine for restaurant partners",
+      "[AI Business Mentor] Built real-time AI mentor chatbot interface with document generation support",
+      "[Adverse Media Screening] Developed dashboards for multilingual risk screening and AML event topology",
+      "[Psychometric Assessment] Delivered MBTI-based personality assessment platform with dynamic logic",
+    ],
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Ant Design",
+      "TailwindCSS",
+      "Recharts",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "TanStack Query",
+    ],
+  },
+  {
+    title: "Jr. Software Engineer",
+    company: "1011 Technologies",
+    location: "Pakistan",
+    period: "06/2023 - 05/2024",
+    type: "Full-time",
+    description:
+      "Full-stack development for various client projects across different domains.",
+    achievements: [
+      "[Talent Platform] Built location-based freelance platform with Google Maps integration and job matching",
+      "[AI Image SaaS Platform] Developed responsive AI SaaS product with advanced image editing features",
+      "[Social Media Platform] Revamped frontend and supported development of discussion forums and admin dashboard",
+      "[Housekeeping Booking Platform] Developed user-friendly web interfaces and backend for cleaner hiring system",
+    ],
+    technologies: [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Google Maps API",
+      "Stripe",
+      "Clerk",
+      "Cloudinary",
+    ],
+  },
+];
+
+/**
+ * Volunteer experiences
+ * These are unpaid roles that showcase contributions to open source or community projects
+ */
+export const volunteerExperiences = [
+  {
+    title: "Software Engineer",
+    company: "kolum.earth",
+    location: "Germany (Remote)",
+    period: "11/2023 - 02/2024",
+    type: "Volunteer",
+    description: "Developed EU CBAM compliance portal for carbon reporting.",
+    achievements: [
+      "Led complete front-end development for CBAM reporting platform",
+      "Implemented server-side pagination and advanced error handling",
+      "Conducted daily client demos and incorporated feedback iteratively",
+      "Ensured type safety using advanced TypeScript concepts",
+    ],
+    technologies: [
+      "TypeScript",
+      "React.js",
+      "Nest.js",
+      "MongoDB",
+      "Prisma",
+      "TailwindCSS",
+      "TanStack Query",
+    ],
+  },
+];

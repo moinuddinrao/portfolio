@@ -42,3 +42,24 @@ export const sectionAnimations: AnimationVariants = {
   container: containerVariants,
   item: itemVariants,
 };
+
+/**
+ * Hover animation variants for interactive elements
+ * Can be applied to buttons, cards, and other interactive components
+ */
+/**
+ * Timeline item animation variants
+ * Used for experience timeline items that animate in from the left
+ * Provides a smooth fade-in and slide-in effect
+ */
+export const timelineItemVariants: Variants = {
+  hidden: { opacity: 0, x: -30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};

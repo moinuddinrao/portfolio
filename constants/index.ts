@@ -1,4 +1,17 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import {
+  BarChartHorizontal,
+  Code2,
+  Component,
+  Database,
+  GitBranch,
+  Github,
+  Globe,
+  Linkedin,
+  Mail,
+  Palette,
+  Server,
+  Wrench,
+} from "lucide-react";
 
 import { AboutParagraph, EducationAchievement, HeroContent } from "@/types";
 
@@ -134,4 +147,95 @@ export const educationAchievements: EducationAchievement[] = [
     description:
       "President, Air University Computing & Innovation Society (2023)",
   },
+];
+
+/**
+ * Skill categories with icons, skills, and colors
+ * Each category has a title, icon, list of skills, and a background color
+ */
+export const skillCategories = [
+  {
+    title: "Languages",
+    icon: Code2,
+    skills: ["JavaScript", "TypeScript", "Python", "HTML", "CSS"],
+    color: "bg-blue-500",
+  },
+  {
+    title: "Frontend",
+    icon: Globe,
+    skills: [
+      "React.js",
+      "Next.js",
+      "Redux",
+      "Context API",
+      "TanStack React Query",
+    ],
+    color: "bg-green-500",
+  },
+  {
+    title: "Backend",
+    icon: Server,
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Nest.js",
+      "RESTful API",
+      "Prisma",
+      "Sequelize ORM",
+    ],
+    color: "bg-purple-500",
+  },
+  {
+    title: "Databases",
+    icon: Database,
+    skills: ["MongoDB", "PostgreSQL"],
+    color: "bg-orange-500",
+  },
+  {
+    title: "UI/UX",
+    icon: Palette,
+    skills: [
+      "TailwindCSS",
+      "Ant Design",
+      "Bootstrap",
+      "Chakra UI",
+      "Shadcn UI",
+      "Material UI",
+    ],
+    color: "bg-pink-500",
+  },
+  {
+    title: "Data Visualization",
+    icon: BarChartHorizontal,
+    skills: ["Recharts", "Ant Design Charts"],
+    color: "bg-indigo-500",
+  },
+  {
+    title: "Version Control",
+    icon: GitBranch,
+    skills: ["Git", "GitHub", "BitBucket"],
+    color: "bg-gray-500",
+  },
+  {
+    title: "Tools",
+    icon: Wrench,
+    skills: ["Postman", "Jira", "Slack", "ClickUp"],
+    color: "bg-red-500",
+  },
+  {
+    title: "Services",
+    icon: Component,
+    skills: ["Google Maps", "Clerk", "Stripe"],
+    color: "bg-yellow-500",
+  },
+];
+
+/**
+ * Professional certifications
+ * List of certifications with titles and platforms
+ */
+export const certifications = [
+  "The Complete Web Development Bootcamp - Udemy (2021)",
+  "Meta Front-End Developer Professional Certification - Coursera (2022)",
+  "IBM Full Stack Software Developer Professional Certification - Coursera (2023)",
 ];

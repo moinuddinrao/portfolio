@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 
-import { HeroContent } from "@/types";
+import { AboutParagraph, EducationAchievement, HeroContent } from "@/types";
 
 /**
  * Navigation items
@@ -84,5 +84,54 @@ export const heroFloatingElements = [
     color: "bg-primary-400 dark:bg-primary-600",
     animation: "animate-pulse",
     delay: "delay-500",
+  },
+];
+
+/**
+ * About section
+ */
+export const aboutHeading = {
+  title: "About",
+  highlight: "Me",
+  subtitle:
+    "Passionate about solving problems and creating innovative solutions",
+};
+
+/**
+ * About section paragraph
+ * This is a brief introduction about the person, their interests, and what they do
+ */
+export const aboutParagraph: AboutParagraph = {
+  text: "I'm passionate about clean code, user experience, and staying up-to-date with the latest technologies. When I'm not coding, you'll find me contributing to open-source projects or mentoring fellow developers.",
+};
+
+/**
+ * Education & notable achievements list
+ */
+export const educationAchievements: EducationAchievement[] = [
+  {
+    title: "Bachelor of Science in Computer Sciences",
+    description: "Air University, Islamabad (2019-2023)",
+  },
+  {
+    title: "Certificate of Appreciation",
+    description: "Craft Your Career workshop, IEEE CUI (2023)",
+  },
+  {
+    title: "Campus Ambassador",
+    description: "Devsinc (2023)",
+  },
+  {
+    title: "Award of Excellence",
+    description: "President, Air University Blood Donor Society (2023)",
+  },
+  {
+    title: "1st Place - Speed Programming Competition",
+    description: "CodeAir 1.0 (2022)",
+  },
+  {
+    title: "Award of Excellence",
+    description:
+      "President, Air University Computing & Innovation Society (2023)",
   },
 ];

@@ -31,3 +31,13 @@ export interface HeroContent {
   };
   scrollLabel: string;
 }
+
+// About section types
+export interface AboutParagraph {
+  text: string;
+}
+
+export interface EducationAchievement {
+  title: string;
+  description: string;
+}

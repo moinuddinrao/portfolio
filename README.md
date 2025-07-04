@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Moin Ud Din - Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS, showcasing my experience as a Full-Stack Software Engineer.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Design**: Clean, professional design with smooth animations
+- **Responsive**: Optimized for all devices (mobile, tablet, desktop)
+- **Performance**: Built with Next.js for optimal performance and SEO
+- **Interactive**: Smooth scrolling, hover effects, and engaging animations
+- **Contact Form**: Functional contact form with email integration
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel
+
+## 📋 Sections
+
+1. **Hero**: Introduction with call-to-action buttons
+2. **About**: Personal background, education, and achievements
+3. **Skills**: Technical skills organized by category
+4. **Experience**: Professional and volunteer work timeline
+5. **Projects**: Featured projects with detailed descriptions
+6. **Contact**: Contact form and social links
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/moinuddinrao/portfolio.git
+    cd portfolio
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Setting Up NodeMailer for Contact Form
+
+1. Install NodeMailer:
+
+    ```bash
+    npm install nodemailer
+    ```
+
+2. Create a "APP PASSWORD" for your email account (Gmail, Outlook, etc.) to use with NodeMailer. This is necessary for secure email sending.
+
+3. Create a `.env` file in the root directory of your project and add your email credentials:
+
+    ```plaintext
+    NEXT_PUBLIC_SMTP_USER=your_email@example.com
+    NEXT_PUBLIC_SMTP_PASS=your_app_password
+    NEXT_PUBLIC_CONTACT_RECEIVER=recipient_email@example.com
+    ```
+
+4. Test the contact form to ensure emails are being delivered correctly.
+
+## 🚀 Deployment
+
+### Deploy to Vercel
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy with one click
+
+### Manual Deployment
+
+1. Build the project:
+
+    ```bash
+    npm run build
+    ```
+
+2. Start the production server:
+
+    ```bash
+    npm start
+    ```
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── About.tsx
+│   ├── Contact.tsx
+│   ├── Experience.tsx
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── Navigation.tsx
+│   ├── Projects.tsx
+│   └── Skills.tsx
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Colors
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The color scheme is defined in `app/globals.css`. You can customize the primary colors by modifying the color palette.
 
-## Learn More
+### Content
 
-To learn more about Next.js, take a look at the following resources:
+Update the content in each component file to reflect your personal information, experience, and projects.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Animations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Framer Motion animations can be customized in each component. Adjust timing, easing, and effects as needed.
 
-## Deploy on Vercel
+## 📧 Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Email**: <moinuddinrao.dev@gmail.com>
+- **Phone**: +92-305-3284679
+- **LinkedIn**: [linkedin.com/in/moinuddinrao](https://linkedin.com/in/moinuddinrao)
+- **GitHub**: [github.com/moinuddinrao](https://github.com/moinuddinrao)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ by Moin Ud Din

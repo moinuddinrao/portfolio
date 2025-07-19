@@ -18,7 +18,15 @@ export const Hero = () => {
     >
       {/* Background Pattern */}
       <div className="from-primary-50 to-primary-100 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 absolute inset-0 bg-gradient-to-br via-white">
-        <div className="absolute inset-0 bg-gray-100 opacity-40"></div>
+        {/* Light mode overlay */}
+        <div className="to-primary-50/30 absolute inset-0 bg-gradient-to-tr from-gray-50/50 dark:hidden"></div>
+
+        {/* Dark mode overlay with subtle pattern */}
+        <div className="absolute inset-0 hidden dark:block">
+          <div className="from-dark-900/90 via-dark-800/50 to-dark-700/30 absolute inset-0 bg-gradient-to-tr"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+        </div>
       </div>
 
       <div className="container-max section-padding relative z-10">
@@ -30,7 +38,7 @@ export const Hero = () => {
         >
           {/* Greeting Badge */}
           <motion.div variants={itemVariants} className="mb-6">
-            <span className="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 mb-4 inline-block rounded-full px-4 py-2 text-sm font-medium">
+            <span className="bg-primary-100 text-primary-700 dark:bg-primary-900/40 dark:text-primary-300 dark:ring-primary-500/50 mb-4 inline-block rounded-full px-4 py-2 text-sm font-medium dark:ring-1">
               {heroContent.greeting}
             </span>
           </motion.div>
@@ -55,7 +63,7 @@ export const Hero = () => {
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-dark-600 dark:text-dark-400 mx-auto mb-12 max-w-3xl text-lg leading-relaxed md:text-xl"
+            className="text-dark-600 dark:text-dark-300 mx-auto mb-12 max-w-3xl text-lg leading-relaxed md:text-xl"
           >
             {heroContent.description}
           </motion.p>
@@ -94,13 +102,15 @@ export const Hero = () => {
           <motion.div variants={itemVariants} className="flex justify-center">
             <a
               href="#about"
-              className="text-dark-500 dark:text-dark-400 hover:text-primary-600 dark:hover:text-primary-400 group transition-colors duration-200"
+              className="group text-dark-500 hover:text-primary-600 dark:text-dark-400 dark:hover:text-primary-400 transition-colors duration-200"
               aria-label={heroContent.scrollLabel}
             >
-              <ArrowDown
-                size={24}
-                className="animate-bounce-slow transition-transform duration-200 group-hover:translate-y-1"
-              />
+              <div className="hover:bg-primary-50 dark:hover:bg-primary-900/30 rounded-full p-2 transition-all duration-300">
+                <ArrowDown
+                  size={24}
+                  className="animate-bounce-slow transition-transform duration-200 group-hover:translate-y-1"
+                />
+              </div>
             </a>
           </motion.div>
         </motion.div>
@@ -110,7 +120,7 @@ export const Hero = () => {
       {heroFloatingElements.map((element, index) => (
         <div
           key={index}
-          className={`absolute ${element.position} ${element.size} ${element.color} rounded-full opacity-20 ${element.animation} ${element.delay}`}
+          className={`absolute ${element.position} ${element.size} ${element.color} rounded-full opacity-30 dark:opacity-20 ${element.animation} ${element.delay} blur-sm`}
         ></div>
       ))}
     </section>

@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 
 import { navItems, socialLinks } from "@/constants";
 
+import { ThemeToggle } from "./ThemeToggle";
+
 export const Navigation = () => {
   // State to manage mobile menu visibility and scroll state
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +80,7 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* Social Links */}
+          {/* Social Links and Theme Toggle */}
           <div className="hidden items-center space-x-4 md:flex">
             {socialLinks.map(link => {
               const Icon = link.icon;
@@ -95,16 +97,22 @@ export const Navigation = () => {
                 </a>
               );
             })}
+            <div className="border-dark-200 dark:border-dark-600 border-l pl-4">
+              <ThemeToggle />
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-dark-600 dark:text-dark-300 hover:text-primary-600 transition-colors duration-200 md:hidden"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="flex items-center space-x-3 md:hidden">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-dark-600 dark:text-dark-300 hover:text-primary-600 transition-colors duration-200"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -125,22 +133,25 @@ export const Navigation = () => {
                   {item.label}
                 </a>
               ))}
-              <div className="border-dark-200 dark:border-dark-700 mt-4 flex items-center space-x-4 border-t pt-4">
-                {socialLinks.map(link => {
-                  const Icon = link.icon;
-                  return (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-                      aria-label={link.label}
-                    >
-                      <Icon size={20} />
-                    </a>
-                  );
-                })}
+              <div className="border-dark-200 dark:border-dark-700 mt-4 flex items-center justify-between border-t pt-4">
+                <div className="flex items-center space-x-4">
+                  {socialLinks.map(link => {
+                    const Icon = link.icon;
+                    return (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                        aria-label={link.label}
+                      >
+                        <Icon size={20} />
+                      </a>
+                    );
+                  })}
+                </div>
+                <ThemeToggle />
               </div>
             </div>
           </div>

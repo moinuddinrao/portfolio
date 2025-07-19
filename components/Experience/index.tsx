@@ -12,7 +12,7 @@ export const Experience = () => {
   const { container: containerVariants, item: itemVariants } =
     sectionAnimations;
   return (
-    <section id="experience" className="dark:bg-dark-900 bg-white py-20">
+    <section id="experience" className="dark:bg-dark-800 bg-gray-100 py-20">
       <div className="container-max section-padding">
         <motion.div
           variants={containerVariants}

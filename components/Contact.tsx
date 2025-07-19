@@ -93,7 +93,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="dark:bg-dark-900 bg-white py-20">
+    <section id="contact" className="dark:bg-dark-800 bg-gray-50 py-20">
       <div className="container-max section-padding">
         <motion.div
           variants={containerVariants}

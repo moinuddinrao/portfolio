@@ -15,7 +15,7 @@ export const About = () => {
   const { container: containerVariants, item: itemVariants } =
     sectionAnimations;
   return (
-    <section id="about" className="dark:bg-dark-900 bg-white py-20">
+    <section id="about" className="section-gradient-light py-20">
       <div className="container-max section-padding">
         <motion.div
           variants={containerVariants}

@@ -101,15 +101,6 @@ export const Footer = () => {
                     </a>
                   </div>
                   <div>
-                    <p className="text-dark-400 text-sm">Phone</p>
-                    <a
-                      href="tel:+923053284679"
-                      className="text-dark-300 hover:text-primary-400 transition-colors duration-200"
-                    >
-                      +92-305-3284679
-                    </a>
-                  </div>
-                  <div>
                     <p className="text-dark-400 text-sm">Location</p>
                     <p className="text-dark-300">Islamabad, Pakistan</p>
                   </div>

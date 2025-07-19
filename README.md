@@ -137,7 +137,6 @@ Framer Motion animations can be customized in each component. Adjust timing, eas
 ## 📧 Contact
 
 - **Email**: <moinuddinrao.dev@gmail.com>
-- **Phone**: +92-305-3284679
 - **LinkedIn**: [linkedin.com/in/moinuddinrao](https://linkedin.com/in/moinuddinrao)
 - **GitHub**: [github.com/moinuddinrao](https://github.com/moinuddinrao)
 

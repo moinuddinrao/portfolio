@@ -12,7 +12,6 @@ import {
   Mail,
   MapPin,
   Palette,
-  Phone,
   Server,
   Wrench,
   Zap,
@@ -558,11 +557,6 @@ export const contactInfo: ContactInfo[] = [
     icon: Mail,
     label: "Email",
     value: "moinuddinrao.dev@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+92-305-3284679",
   },
   {
     icon: MapPin,

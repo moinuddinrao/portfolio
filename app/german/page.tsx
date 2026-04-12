@@ -732,49 +732,64 @@ export default function GermanLearningPlan() {
                       {section.title}
                     </h3>
                     <div className="space-y-2">
-                      {section.items.map((item: any, i: number) => (
-                        <div
-                          key={i}
-                          className="border-dark-200 dark:border-dark-700 dark:bg-dark-800 rounded-lg border bg-white p-4"
-                        >
-                          <div className="mb-1 flex flex-wrap items-center gap-2">
-                            {item.url ? (
-                              <a
-                                href={item.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-primary-600 decoration-primary-300 hover:text-primary-700 dark:text-primary-400 dark:decoration-primary-700 dark:hover:text-primary-300 text-sm font-bold underline underline-offset-2 transition-colors"
-                              >
-                                {item.name}
-                              </a>
-                            ) : (
-                              <span className="text-dark-800 dark:text-dark-100 text-sm font-bold">
-                                {item.name}
-                              </span>
-                            )}
-                            {item.price && <PriceBadge price={item.price} />}
-                            {item.priority && (
-                              <PriorityBadge priority={item.priority} />
-                            )}
-                            {item.level && (
-                              <span className="text-dark-500 dark:text-dark-400 text-xs font-semibold">
-                                {item.level}
-                              </span>
-                            )}
-                            {item.type && (
-                              <span className="text-dark-400 dark:text-dark-500 text-xs">
-                                ({item.type})
-                              </span>
-                            )}
+                      {section.items.map(
+                        (
+                          item: {
+                            name: string;
+                            url?: string;
+                            price?: string;
+                            priority?: string;
+                            level?: string;
+                            type?: string;
+                            desc?: string;
+                            author?: string;
+                            note?: string;
+                          },
+                          i: number,
+                        ) => (
+                          <div
+                            key={i}
+                            className="border-dark-200 dark:border-dark-700 dark:bg-dark-800 rounded-lg border bg-white p-4"
+                          >
+                            <div className="mb-1 flex flex-wrap items-center gap-2">
+                              {item.url ? (
+                                <a
+                                  href={item.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-primary-600 decoration-primary-300 hover:text-primary-700 dark:text-primary-400 dark:decoration-primary-700 dark:hover:text-primary-300 text-sm font-bold underline underline-offset-2 transition-colors"
+                                >
+                                  {item.name}
+                                </a>
+                              ) : (
+                                <span className="text-dark-800 dark:text-dark-100 text-sm font-bold">
+                                  {item.name}
+                                </span>
+                              )}
+                              {item.price && <PriceBadge price={item.price} />}
+                              {item.priority && (
+                                <PriorityBadge priority={item.priority} />
+                              )}
+                              {item.level && (
+                                <span className="text-dark-500 dark:text-dark-400 text-xs font-semibold">
+                                  {item.level}
+                                </span>
+                              )}
+                              {item.type && (
+                                <span className="text-dark-400 dark:text-dark-500 text-xs">
+                                  ({item.type})
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-dark-500 dark:text-dark-400 text-sm leading-relaxed">
+                              {item.desc ||
+                                (item.author
+                                  ? `by ${item.author}${item.note ? ` — ${item.note}` : ""}`
+                                  : item.note)}
+                            </p>
                           </div>
-                          <p className="text-dark-500 dark:text-dark-400 text-sm leading-relaxed">
-                            {item.desc ||
-                              (item.author
-                                ? `by ${item.author}${item.note ? ` — ${item.note}` : ""}`
-                                : item.note)}
-                          </p>
-                        </div>
-                      ))}
+                        ),
+                      )}
                     </div>
                   </div>
                 ))}
